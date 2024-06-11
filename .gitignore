@@ -1,3 +1,5 @@
 /*.pdm
 /*.pdb
 .idea
+/docker/**/volume/*
+.DS_Store

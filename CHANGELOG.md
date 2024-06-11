@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## v1.3.0 - 10/06/2024
+
+- Update README e CHANGELOG.
+- Remoção das colunas `latitude` e `longitude` (type: double) da tabela `cidade`, mantendo as informações somente na coluna `lat_lon` (type: point).
+- Add cidade (município) `Angicos` do estado Rio Grande do Norte (RN) - [https://cidades.ibge.gov.br/brasil/rn/angicos/panorama]()
+    - Colaboração [@leanmarqs](https://github.com/leanmarqs).
+- Add coluna `ddi` (DDI - Discagem Direta Internacional) na tabela `pais`, e seus respectivos valores.
+- Add containerização de banco de dados para testes locais rápidos.
+
 ## v1.2.4 - 05/08/2019
 
 - Update README e CHANGELOG.
