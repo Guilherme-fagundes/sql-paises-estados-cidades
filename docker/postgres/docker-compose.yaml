@@ -1,0 +1,18 @@
+services:
+
+  postgres:
+    container_name: postgres
+    build: .
+    image: postgres:alpine3.20
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./initdb:/docker-entrypoint-initdb.d
+      - ./volume:/var/lib/postgresql/data
+      - ../../PostgreSQL/pais.sql:/postgres-pais.sql
+      - ../../PostgreSQL/estado.sql:/postgres-estado.sql
+      - ../../PostgreSQL/cidade.sql:/postgres-cidade.sql
